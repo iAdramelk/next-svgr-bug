@@ -1,5 +1,10 @@
 module.exports = {
   reactStrictMode: true,
+  images: {
+    path: "/_next/image/",
+    disableStaticImages: true,
+    domains: ["i.ytimg.com"],
+  },
   webpack: (config) => {
     config.module.rules.push({
       test: /\.svg$/,
