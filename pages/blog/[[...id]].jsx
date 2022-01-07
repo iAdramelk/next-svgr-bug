@@ -1,5 +1,6 @@
-import Icon from "../icons/alarm.svg?react";
-import iconSrc from "../icons/alarm.svg";
+import Image from "next/image";
+import Icon from "../../icons/alarm.svg?react";
+import iconSrc from "../../icons/alarm.svg";
 
 export async function getStaticPaths() {
   return { paths: [
@@ -15,7 +16,7 @@ export async function getStaticProps({ params }) {
 
 export default function BlogPost({ id }) {
   return (<div>
-    <img src={iconSrc} alt="" />
+    <Image src={iconSrc} alt="" />
     <Icon />
   </div>);
 }
