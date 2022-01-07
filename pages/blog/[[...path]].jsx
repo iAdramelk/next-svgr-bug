@@ -3,16 +3,22 @@ import Icon from "../../icons/alarm.svg?react";
 import iconSrc from "../../icons/alarm.svg";
 
 export async function getStaticPaths() {
-  return { paths: [
-    { params: { id: ['1'] } }
-  ], fallback: false };
+  return {
+    paths: [
+      {
+        params: { path: ["tags", "abc"] },
+      },
+    ],
+    fallback: false,
+  };
 }
 
 export async function getStaticProps({ params }) {
   return {
-    props: params,
+    props: {},
   };
 }
+
 
 export default function BlogPost({ id }) {
   return (<div>
